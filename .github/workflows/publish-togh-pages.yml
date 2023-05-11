@@ -1,4 +1,5 @@
 name: publish demo
+
 on:
   push:
     branches: [ main ]
@@ -8,6 +9,10 @@ on:
         description: 'The reason for running the workflow'
         required: true
         default: 'Manual run'
+
+permissions:
+  contents: write
+
 jobs:
   deploy-to-github-pages:
     runs-on: ubuntu-latest
