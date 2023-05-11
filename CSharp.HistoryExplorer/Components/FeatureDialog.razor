@@ -1,0 +1,26 @@
+﻿<MudDialog DisableSidePadding="true">
+    <DialogContent>
+        <MudContainer Style="max-height: 80vhl overflow-y: scroll;">
+            @if (_isLoading)
+            {
+                <MudText Typo="Typo.h5" Color="Color.Secondary" Class="pb-2">
+                    Loading feateure, please wait...
+                </MudText>
+                <MudProgressCircular Color="Color.Secondary" Indeterminate="true" Class="pb-4" />
+            }
+            else
+            {
+                <MudText Class="pa-4 feature-text" Typo="Typo.body1">
+                    @_content.Html
+                </MudText>
+            }
+        </MudContainer>
+    </DialogContent>
+    <DialogActions>
+        <MudButton Color="Color.Primary" Size="Size.Large" Variant=Variant.Filled
+                   StartIcon="@Icons.Material.Filled.Close"
+                   OnClick="@OnCloseClick">
+            Close
+        </MudButton>
+    </DialogActions>
+</MudDialog>

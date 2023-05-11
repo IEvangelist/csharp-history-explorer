@@ -1,0 +1,49 @@
+﻿@page "/"
+
+<PageTitle>History of C#</PageTitle>
+
+<MudTimeline TimelineAlign="TimelineAlign.Start" TimelinePosition="TimelinePosition.Left">
+    @foreach (var (index, item) in Items.OrderBy(_ => _.Date).Select((item, i) => (i, item)))
+    {
+        var (date, version, reference, details) = item;
+        var color = Colors[index % Colors.Length];
+        var isEven = index % 2 is 0;
+
+        <MudTimelineItem Color="@color" Size="Size.Medium" Variant="Variant.Filled">
+            <ItemDot>
+                <MudIcon Icon="@Icons.Material.Filled.Code" />
+            </ItemDot>
+            <ItemContent>
+                <MudText GutterBottom="true">
+                    <MudLink Href="@reference" Target="_blank" Typo="Typo.h4"
+                             Style="font-family: monospace;" Color="@color">
+                        @($"{date:MMMM yyyy} — {item.Label}")
+                        <MudIcon Icon="@Icons.Material.Filled.OpenInNew" Size="Size.Small" Color="@color" />
+                    </MudLink>
+                </MudText>
+                <MudPaper Class="pa-4 rounded" Width="100%" Outlined="true">
+                    <MudList Dense="true" Clickable="true" Color="@color">
+                        @foreach (var detail in details.OrderBy(d => d.Text))
+                        {
+                            var (text, name, reference) = detail;
+
+                            <MudListItem Icon="@Icons.Material.Filled.CheckCircle" IconSize="Size.Small"
+                                         IconColor="@color" Disabled=@(reference is null)
+                                         OnClick=@(_ => OnDisplayFeatureDialog(item, detail))>
+                                <p style="font-family: monospace;">
+                                    @text.ToHtml()
+                                </p>
+                            </MudListItem>
+                        }
+                    </MudList>
+                </MudPaper>
+            </ItemContent>
+        </MudTimelineItem>
+    }
+</MudTimeline>
+
+<MudScrollToTop VisibleCssClass="visible absolute"
+                HiddenCssClass="invisible">
+    <MudFab Color="Color.Tertiary" IconSize="Size.Large"
+            StartIcon="@Icons.Material.Filled.ArrowUpward" />
+</MudScrollToTop>
