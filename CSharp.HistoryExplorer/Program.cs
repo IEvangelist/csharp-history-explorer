@@ -13,5 +13,7 @@ builder.Services.AddMudServices();
 builder.Services.AddLocalStorageServices();
 builder.Services.AddMemoryCache();
 builder.Services.AddScoped<FeatureClient>();
+builder.Services.AddSingleton<AppState>();
+builder.Services.AddSingleton<WindowService>();
 
 await builder.Build().RunAsync();
