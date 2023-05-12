@@ -11,6 +11,7 @@ builder.Services.AddScoped(sp => new HttpClient
 });
 builder.Services.AddMudServices();
 builder.Services.AddLocalStorageServices();
+builder.Services.AddSessionStorageServices();
 builder.Services.AddMemoryCache();
 builder.Services.AddScoped<FeatureClient>();
 builder.Services.AddSingleton<AppState>();

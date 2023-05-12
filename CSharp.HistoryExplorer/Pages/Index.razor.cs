@@ -18,6 +18,7 @@ public sealed partial class Index
     internal IReadOnlySet<TimelineEntry> Items { get; } = History.Items;
 
     [Inject] public required IDialogService Dialog { get; set; }
+    [Inject] public required AppState State { get; set; }
 
     private void OnDisplayFeatureDialog(TimelineEntry entry, EntryDetail detail)
     {
@@ -28,7 +29,11 @@ public sealed partial class Index
             [nameof(FeatureDialog.Name)] = detail.Name,
             [nameof(FeatureDialog.Reference)] = detail.Reference,
             [nameof(FeatureDialog.Version)] = entry.Version
-        });
+        },
+        new DialogOptions
+        {
+            FullScreen = State.WindowSize is null or { Height: < 1080, Width: < 1920 }
+        }) ;
 
         static string ToNormalizedTitle(string value)
         {

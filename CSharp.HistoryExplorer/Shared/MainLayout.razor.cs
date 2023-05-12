@@ -13,6 +13,7 @@ public sealed partial class MainLayout
         set => LocalStorage.SetItem<bool>(StorageKeys.PrefersDarkThemeKey, value);
     }
 
+    [Inject] public required IDialogService DialogService { get; set; }
     [Inject] public required ILocalStorageService LocalStorage { get; set; }
     [Inject] public required WindowService WindowService { get; set; }
     [Inject] public required ILogger<MainLayout> Logger { get; set; }
@@ -34,4 +35,5 @@ public sealed partial class MainLayout
     }
 
     void OnThemeChanged() => IsDarkTheme = !IsDarkTheme;
+    void OnShowSettingsDialog() => DialogService.Show<SettingsDialog>();
 }

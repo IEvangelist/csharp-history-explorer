@@ -1,0 +1,32 @@
+﻿<MudDialog>
+    <TitleContent>
+        <MudText Typo="Typo.h4">
+            <MudIcon Icon="@Icons.Material.TwoTone.Settings" Color="Color.Primary" 
+                     Size="Size.Large" Class="mr-3 mb-n1" /> Azure.AI.OpenAI Settings
+        </MudText>
+    </TitleContent>
+    <DialogContent>
+        <div class="py-2">
+            <MudTextField @bind-Value="@State.OpenAISettings.ApiKey" Label="API Key"
+                          Required="true" RequiredError="An Azure.AI.OpenAI API Key is required." InputType="@InputType.Password"
+                          HelperText="" AutoFocus="true" OnlyValidateIfDirty="true" />
+            <MudTextField @bind-Value="@State.OpenAISettings.Endpoint" Label="Endpoint"
+                          Required="true" RequiredError="An Azure.AI.OpenAI Endpoint is required." InputMode="@InputMode.url"
+                          OnlyValidateIfDirty="true" />
+            <MudTextField @bind-Value="@State.OpenAISettings.DeploymentId" Label="Deployment ID"
+                          Required="true" RequiredError="An Azure.AI.OpenAI Deployment ID is required." 
+                          OnlyValidateIfDirty="true" />
+        </div>
+    </DialogContent>
+    <DialogActions>
+        <MudButton Color="Color.Error" StartIcon="@Icons.Material.TwoTone.Clear"
+                   OnClick="Cancel" Size="Size.Large" IconSize="Size.Large" Variant="Variant.Filled" Class="ma-4">
+            Clear
+        </MudButton>
+        <MudSpacer />
+        <MudButton Color="Color.Primary" StartIcon="@Icons.Material.TwoTone.Save"
+                   OnClick="Save" Size="Size.Large" IconSize="Size.Large" Variant="Variant.Filled" Class="ma-4">
+            Save
+        </MudButton>
+    </DialogActions>
+</MudDialog>
