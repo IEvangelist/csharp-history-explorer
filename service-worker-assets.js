@@ -13,6 +13,10 @@
       "url": "android-chrome-512x512.png"
     },
     {
+      "hash": "sha256-UtGcOpMT+3psnqBjIoyGD5jt0uQZlww2BXEuIW5cOPY=",
+      "url": "app.js"
+    },
+    {
       "hash": "sha256-yJzuQ+VHDvRaW0KW0GI6uBen2CBGnvCdMdWZB6G3eZc=",
       "url": "apple-touch-icon.png"
     },
@@ -33,7 +37,7 @@
       "url": "favicon.ico"
     },
     {
-      "hash": "sha256-rn1hBDB2p3FhoFu20yPmmh0g4kPDrSOTMAzk7VblnyU=",
+      "hash": "sha256-SJSqK6eVStV7Qty6EAYlNKuaNaFGeCXugG56j5zc5oo=",
       "url": "index.html"
     },
     {
@@ -73,7 +77,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-qcpqBXUx\/aacaXnO2pqDJuBHKRnv0vuY0OEOb7G\/2bc=",
+      "hash": "sha256-+DbGZKZ8R1ozb2GU7ali7G1ngl3hJxvgyG2Ivo+b92k=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -85,7 +89,7 @@
       "url": "_framework\/Blazor.Serialization.dll"
     },
     {
-      "hash": "sha256-shZNIoP9EmWRSd46xnRYDUaeyXUbmS7sRqU3NnEbJ68=",
+      "hash": "sha256-tZYMuWCH7pnb8F+BrcFFcRA1Z9HM\/2b7GjagdSYLqKg=",
       "url": "_framework\/CSharp.HistoryExplorer.dll"
     },
     {
@@ -133,7 +137,7 @@
       "url": "_framework\/Microsoft.Extensions.DependencyInjection.dll"
     },
     {
-      "hash": "sha256-1aSPCLQ1D98eHKUC0ZPpNqAGTQm0l4AFWvoXCvyIdlQ=",
+      "hash": "sha256-zfkAn5ywpbNBTKi7kmywSbwGeHU\/MvXoEWC5vel\/5lY=",
       "url": "_framework\/Microsoft.Extensions.Logging.Abstractions.dll"
     },
     {
@@ -201,7 +205,7 @@
       "url": "_framework\/System.ObjectModel.dll"
     },
     {
-      "hash": "sha256-fVxth+2KQMmPZEMAbtxTAEvd8AfQBjpV++fvXEqT4\/E=",
+      "hash": "sha256-77LTe9QHI0xu2AasjEc0p7wj39j1yS7\/kJoROR8GWKI=",
       "url": "_framework\/System.Private.CoreLib.dll"
     },
     {
@@ -213,7 +217,7 @@
       "url": "_framework\/System.Runtime.CompilerServices.Unsafe.dll"
     },
     {
-      "hash": "sha256-JsmgSwZmD4cL+Fv2NKRYSbrbq1\/GO6uHD4hbkvgRwlo=",
+      "hash": "sha256-4aVPu1nLY8NRp7KGSCZaETg4ZL867aWN0ErXEaQpam4=",
       "url": "_framework\/System.Runtime.dll"
     },
     {
@@ -249,5 +253,5 @@
       "url": "_content\/MudBlazor\/MudBlazor.min.js"
     }
   ],
-  "version": "Rl2r67Gz"
+  "version": "7ecaiiKV"
 };
