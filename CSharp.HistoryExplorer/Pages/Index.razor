@@ -26,14 +26,24 @@
                         @foreach (var detail in details.OrderBy(d => d.Text))
                         {
                             var (text, name, reference) = detail;
-
-                            <MudListItem Icon="@Icons.Material.Filled.CheckCircle" IconSize="Size.Small"
-                                         IconColor="@color" Disabled=@(reference is null)
-                                         OnClick=@(_ => OnDisplayFeatureDialog(item, detail))>
-                                <p style="font-family: monospace;">
-                                    @text.ToHtml()
-                                </p>
-                            </MudListItem>
+                            if (reference is null)
+                            {
+                                <MudListItem Icon="@Icons.Material.Filled.CheckCircle" IconSize="Size.Small"
+                                             IconColor="@color" Disabled=true>
+                                    <p style="font-family: monospace;">
+                                        @text.ToHtml()
+                                    </p>
+                                </MudListItem>
+                            }
+                            else
+                            {
+                                <MudListItem Icon="@Icons.Material.Filled.CheckCircle" IconSize="Size.Small"
+                                             IconColor="@color" OnClickHandlerPreventDefault=true>
+                                    <MudLink Href="@reference" Color="Color.Inherit" Target="_blank" Style="font-family: monospace;">
+                                        @text.ToHtml()
+                                    </MudLink>
+                                </MudListItem>
+                            }                            
                         }
                     </MudList>
                 </MudPaper>
