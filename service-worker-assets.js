@@ -37,7 +37,7 @@
       "url": "favicon.ico"
     },
     {
-      "hash": "sha256-SJSqK6eVStV7Qty6EAYlNKuaNaFGeCXugG56j5zc5oo=",
+      "hash": "sha256-s\/wcfLg9vuNG9ve\/8NqFZfA6dJpH\/fwQqQhgdG3ODQk=",
       "url": "index.html"
     },
     {
@@ -253,5 +253,5 @@
       "url": "_content\/MudBlazor\/MudBlazor.min.js"
     }
   ],
-  "version": "ZP9Eorgz"
+  "version": "8duTt\/Vf"
 };
