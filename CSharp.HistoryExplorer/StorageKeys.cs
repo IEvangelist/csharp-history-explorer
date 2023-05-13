@@ -5,5 +5,5 @@ namespace CSharp.HistoryExplorer;
 
 internal static class StorageKeys
 {
-    internal const string PrefersDarkThemeKey = "prefers-dark-scheme";
+    internal const string ThemePreferenceKey = "theme-preference";
 }

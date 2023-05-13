@@ -3,17 +3,18 @@
 
 namespace CSharp.HistoryExplorer.Services;
 
-public sealed class WindowService
+public sealed class AppService
 {
     private readonly ConcurrentDictionary<Guid, Action<int, int>> s_callbackRegistry = new();
     private readonly IJSRuntime _runtime;
 
-    public WindowService(IJSRuntime runtime) => _runtime = runtime;
+    private Action<bool>? _onPrefersDarkSchemeChanged;
+
+    public AppService(IJSRuntime runtime) => _runtime = runtime;
 
     /// <summary>
     /// When the <c>window.onresize</c> event fires, the given
-    /// <paramref name="component"/> will have its <paramref name="onResized"/>
-    /// callback invoked.
+    /// <paramref name="onResized"/> callback is invoked.
     /// </summary>
     /// <returns>When successfully registered returns <c>true</c>, else <c>false</c>.</returns>
     internal bool OnWindowResized(Action<int, int> onResized)
@@ -42,4 +43,30 @@ public sealed class WindowService
             callback.Invoke(width, height);
         }
     }
+
+    /// <summary>
+    /// When the <c>window.matchMedia('(prefers-color-scheme: dark)').onchange</c> event fires,
+    /// the given <paramref name="onPrefersDarkSchemeChanged"/> will have its callback invoked.
+    /// </summary>
+    /// <returns>
+    /// Returns <c>true</c> when the preferred scheme is <c>dark</c>, else <c>false</c>.
+    /// </returns>
+    internal bool OnPrefersDarkSchemeChanged(Action<bool> onPrefersDarkSchemeChanged)
+    {
+        _onPrefersDarkSchemeChanged = onPrefersDarkSchemeChanged;
+
+        return _runtime switch
+        {
+            IJSInProcessRuntime inProcessRuntime => inProcessRuntime.Invoke<bool>(
+                "app.onPrefersDarkSchemeChanged",
+                DotNetObjectReference.Create(this),
+                nameof(OnPrefersDarkSchemeChanged)),
+
+            _ => false
+        };
+    }
+
+    [JSInvokable]
+    public void OnPrefersDarkSchemeChanged(bool prefersDarkScheme) =>
+        _onPrefersDarkSchemeChanged?.Invoke(prefersDarkScheme);
 }

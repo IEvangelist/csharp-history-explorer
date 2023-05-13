@@ -9,12 +9,11 @@ public sealed partial class SettingsDialog
 
     [Inject] public required AppState State { get; set; }
 
-    private void Cancel() => Dialog.Cancel();
-
-    private void Save()
+    private void Cancel()
     {
-        // TODO: Save...
-
-        Dialog.Close();
+        State.OpenAISettings = OpenAI.Empty;
+        Dialog.Cancel();
     }
+
+    private void Save() => Dialog.Close();
 }

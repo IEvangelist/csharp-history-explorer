@@ -5,6 +5,7 @@ global using System.Collections.Concurrent;
 global using System.Globalization;
 global using CSharp.HistoryExplorer;
 global using CSharp.HistoryExplorer.Components;
+global using CSharp.HistoryExplorer.Enums;
 global using CSharp.HistoryExplorer.Extensions;
 global using CSharp.HistoryExplorer.Models;
 global using CSharp.HistoryExplorer.Services;

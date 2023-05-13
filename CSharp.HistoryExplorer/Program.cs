@@ -15,6 +15,6 @@ builder.Services.AddSessionStorageServices();
 builder.Services.AddMemoryCache();
 builder.Services.AddScoped<FeatureClient>();
 builder.Services.AddSingleton<AppState>();
-builder.Services.AddSingleton<WindowService>();
+builder.Services.AddSingleton<AppService>();
 
 await builder.Build().RunAsync();

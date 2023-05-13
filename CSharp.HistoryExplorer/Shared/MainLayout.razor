@@ -17,12 +17,11 @@
         <MudSpacer />
         <MudIconButton Icon="@Icons.Material.TwoTone.Settings" Color="Color.Inherit"
                        Size="Size.Large" OnClick="OnShowSettingsDialog" />
-        <MudToggleIconButton Toggled="@IsDarkTheme" ToggledChanged="@OnThemeChanged"
-                             Size="Size.Large" ToggledSize="Size.Large"
-                             Title="Switch to Dark Theme" ToggledTitle="Switch to Light Theme"
-                             Color="@Color.Inherit" ToggledColor="@Color.Inherit"
-                             Icon="@Icons.Material.TwoTone.DarkMode"
-                             ToggledIcon="@Icons.Material.TwoTone.LightMode" />
+        <MudTooltip Duration="1_000" Text=@ThemeIconText>
+            <MudIconButton Size="Size.Large"
+                           Color="@Color.Inherit"
+                           Icon="@ThemeIcon" OnClick="OnToggleDarkMode" />
+        </MudTooltip>
         <MudIconButton Icon="@Icons.Custom.Brands.GitHub" Color="Color.Inherit"
                        Size="Size.Large" Href="https://github.com/IEvangelist/csharp-history-explorer" Target="_blank" />
     </MudAppBar>

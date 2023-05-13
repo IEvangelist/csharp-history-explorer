@@ -2,20 +2,23 @@
     <TitleContent>
         <MudText Typo="Typo.h4">
             <MudIcon Icon="@Icons.Material.TwoTone.Settings" Color="Color.Primary" 
-                     Size="Size.Large" Class="mr-3 mb-n1" /> Azure.AI.OpenAI Settings
+                     Size="Size.Large" Class="mr-3 mb-n1" /> <code>Azure.AI.OpenAI</code> Settings
         </MudText>
     </TitleContent>
     <DialogContent>
         <div class="py-2">
             <MudTextField @bind-Value="@State.OpenAISettings.ApiKey" Label="API Key"
                           Required="true" RequiredError="An Azure.AI.OpenAI API Key is required." InputType="@InputType.Password"
-                          HelperText="" AutoFocus="true" OnlyValidateIfDirty="true" />
+                          HelperText="00xxx00x00x00x00x0x00xxx00000xx0" AutoFocus="true" OnlyValidateIfDirty="true"
+                          Variant="Variant.Outlined" Class="py-2" />
             <MudTextField @bind-Value="@State.OpenAISettings.Endpoint" Label="Endpoint"
                           Required="true" RequiredError="An Azure.AI.OpenAI Endpoint is required." InputMode="@InputMode.url"
-                          OnlyValidateIfDirty="true" />
+                          HelperText="https://your-openai-instance.openai.azure.com/" OnlyValidateIfDirty="true"
+                          Variant="Variant.Outlined" Class="py-2" />
             <MudTextField @bind-Value="@State.OpenAISettings.DeploymentId" Label="Deployment ID"
                           Required="true" RequiredError="An Azure.AI.OpenAI Deployment ID is required." 
-                          OnlyValidateIfDirty="true" />
+                          OnlyValidateIfDirty="true"
+                          HelperText="your-openai-deployment" Variant="Variant.Outlined" Class="py-2" />
         </div>
     </DialogContent>
     <DialogActions>
