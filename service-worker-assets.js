@@ -13,7 +13,7 @@
       "url": "android-chrome-512x512.png"
     },
     {
-      "hash": "sha256-KgyQQ9K7hFe2ELRYWTGIZ3HTAskcM6ZMUH+kGq2ilmQ=",
+      "hash": "sha256-p3\/SpeOhx3JAtFWReTlV8iB3QJ3JLSFr+h\/uxL\/N4yo=",
       "url": "app.js"
     },
     {
@@ -77,7 +77,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-wI0HVTjZQ7Is0eiIQe8rMlnK52yYZsNTtACLF\/5vkXg=",
+      "hash": "sha256-AE2ujgmq8i3zHn5kUKP3I6jnqABT2ZSAU\/P\/wcnQhtw=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -101,7 +101,7 @@
       "url": "_framework\/Blazor.SessionStorage.WebAssembly.dll"
     },
     {
-      "hash": "sha256-NbCKHoZIpcERy0gstgdePFu1itUHnFbGG9EXV5dVFDs=",
+      "hash": "sha256-91oZvLTd8rmd0oeaK+vZlWI4CAP42Vir21WLDIE6atM=",
       "url": "_framework\/CSharp.HistoryExplorer.dll"
     },
     {
@@ -181,7 +181,7 @@
       "url": "_framework\/Microsoft.JSInterop.WebAssembly.dll"
     },
     {
-      "hash": "sha256-TceJN8YLpqZCoJCxKnJl4IrI\/QS5GbEbQGzD4V4enhc=",
+      "hash": "sha256-h9WIl8AgSvuE\/BYkqENztRFd8xNSuK6kTYdcXMsznOA=",
       "url": "_framework\/MudBlazor.dll"
     },
     {
@@ -365,5 +365,5 @@
       "url": "_content\/MudBlazor\/MudBlazor.min.js"
     }
   ],
-  "version": "VZdwDzFU"
+  "version": "YnIU+1Ns"
 };

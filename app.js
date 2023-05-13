@@ -39,6 +39,20 @@ function debounce(func, wait = 20, immediate = true) {
     };
 }
 
+function onPrefersDarkSchemeChanged(dotnetObj, callbackMethodName) {
+    let media = window.matchMedia('(prefers-color-scheme: dark)');
+    if (media) {
+        media.onchange = args => {
+            dotnetObj.invokeMethodAsync(
+                callbackMethodName,
+                args.matches);
+        };
+    }
+
+    return media.matches;
+}
+
 window.app = Object.assign({}, window.app, {
-    onWindowResized
+    onWindowResized,
+    onPrefersDarkSchemeChanged
 })
