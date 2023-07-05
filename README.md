@@ -6,5 +6,5 @@ Demo app: https://ievangelist.github.io/csharp-history-explorer
 
 ## Future work
 
-- Add `Retrivel Augmented Generation (RAG)` for content.
+- Add `Retrieval Augmented Generation (RAG)` for content.
   - Query static content, feed it into OpenAI prompt, then generate new explainations of each version.
