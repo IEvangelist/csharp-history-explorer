@@ -15,18 +15,22 @@
 <MudLayout>
     <MudAppBar Elevation="2" Color="Color.Tertiary">
         <MudSpacer />
-        <MudIconButton Icon="@Icons.Material.TwoTone.Settings" Color="Color.Inherit"
-                       Size="Size.Large" OnClick="OnShowSettingsDialog" />
-        <MudTooltip Duration="1_000" Text=@ThemeIconText>
-            <MudIconButton Size="Size.Large"
-                           Color="@Color.Inherit"
+        <MudTooltip Duration="1_000" Text="Open settings dialog?" Arrow=true Placement="Placement.Left">
+            <MudIconButton Icon="@Icons.Material.TwoTone.Settings" Color="Color.Inherit"
+                           Size="Size.Large" OnClick="OnShowSettingsDialog" />
+        </MudTooltip>
+        <MudTooltip Duration="1_000" Text=@ThemeIconText Arrow=true Placement="Placement.Left">
+            <MudIconButton Size="Size.Large" Color="@Color.Inherit"
                            Icon="@ThemeIcon" OnClick="OnToggleDarkMode" />
         </MudTooltip>
-        <MudIconButton Icon="@Icons.Custom.Brands.GitHub" Color="Color.Inherit"
-                       Size="Size.Large" Href="https://github.com/IEvangelist/csharp-history-explorer" Target="_blank" />
+        <MudTooltip Duration="1_000" Text="Open GitHub repository link (in new tab)?" Arrow=true Placement="Placement.Left">
+            <MudIconButton Icon="@Icons.Custom.Brands.GitHub" Color="Color.Inherit"
+                           Size="Size.Large" Target="_blank"
+                           Href="https://github.com/IEvangelist/csharp-history-explorer" />
+        </MudTooltip>
     </MudAppBar>
     <MudMainContent>
-        <MudContainer MaxWidth="MaxWidth.Large" Class="my-4">
+        <MudContainer MaxWidth="MaxWidth.Large" Class="my-4" Style="overflow-y: auto;">
             @Body
         </MudContainer>
     </MudMainContent>

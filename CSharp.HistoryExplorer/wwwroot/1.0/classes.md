@@ -1,4 +1,4 @@
-In C#, and `class` is a fundamental concept of object-oriented programming. A `class` is a blueprint or a template that defines the characteristics and behavior of objects. In C#, a class can contain data members (fields) and methods. 
+In C#, a `class` is a fundamental concept of object-oriented programming. A `class` is a blueprint or a template that defines the characteristics and behavior of objects. In C#, a class can contain data members (fields) and methods. 
 
 Classes in C# are used to create objects, which are instances of a class. Objects are used to represent real-world entities or concepts, and they encapsulate data and behavior related to those entities or concepts. For example, if you were building a program to manage a library, you might create a Book class that encapsulates data about the book, such as the title, author, and ISBN, as well as methods for checking the book out, returning it, and so on. You could then create multiple `Book` objects to represent the different books in the library.
 

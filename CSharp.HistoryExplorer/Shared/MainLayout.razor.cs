@@ -45,9 +45,9 @@ public sealed partial class MainLayout : IDisposable
 
 
         var prefersDarkScheme =
-            AppService.OnPrefersDarkSchemeChanged(OnPrefersDarkScheme);
+            AppService.OnPrefersDarkSchemeChanged(PrefersDarkSchemeHandler);
 
-        OnPrefersDarkScheme(prefersDarkScheme);
+        PrefersDarkSchemeHandler(prefersDarkScheme);
 
         base.OnInitialized();
     }
@@ -60,7 +60,7 @@ public sealed partial class MainLayout : IDisposable
             _ => State.SystemTheme is ThemePreference.Dark
         };
 
-    void OnPrefersDarkScheme(bool prefersDarkScheme)
+    void PrefersDarkSchemeHandler(bool prefersDarkScheme)
     {
         Logger.LogInformation(
             "Prefers dark scheme: {Value}",
